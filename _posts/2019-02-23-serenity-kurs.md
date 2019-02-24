@@ -1,12 +1,21 @@
 ---
 title:  "Serenity kurs"
+comments: true
 updated: 2015-09-06 15:56
 ---
+
+# Test
+
+## TEST @
+
+* test
+* test f
+
 
 Costma costam i cose tam
 
 {% highlight java %}
-@Override
+	@Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(loginToAccount());
         actor.should(seeThat("is logged", new Pyt(), Matchers.notNullValue()));
@@ -18,3 +27,4 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
+

@@ -25,4 +25,21 @@ layout: default
 		<span> &middot; </span>
     <a class="prev" href="{{ page.previous.url | prepend: site.baseurl | prepend: site.url }}" title="PREV: {{page.previous.title}}">&gt;&gt;</a>
   {% endif %}
+
+  {% if page.comments %}
+  	<div id="comments"></div>
+	<script type="text/javascript">
+		const gitment = new Gitment({
+			owner: 'qbek',
+			repo: 'qbek.github.io',
+			oauth: {
+				client_id: '0e940a9688c28c2b1f84',
+				client_secret: 'da442c531ffa80e9040a963fad87e118b0c43e06',
+				},
+			});
+
+			gitment.render('comments')
+	</script>
+
+	{% endif %}
 </div>
