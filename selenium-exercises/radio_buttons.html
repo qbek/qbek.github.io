@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Selenium exercises - Radio buttons</title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Start</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Zadanie 3</li>
+          </ol>
+        </nav>
+        <h2>Zadanie 3</h2>
+        <p class="lead"><strong>Elementy typu <i>radio button</i></strong></p>
+        <hr class="my-4">
+      </div>
+    </div>
+    <div class="row pb-5">
+      <div class="col-4">
+        <div class="card">
+          <h5 class="card-header bg-success text-white">Rozgłośnie radiowe</h5>
+          <div class="card-body" name="color-card">
+            <h5 class="card-title">Wybierz radio (button)</h5>
+            <form action="" class="mb-3">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radio-select" value="rmffm">
+                <label class="form-check-label" for="exampleRadios1">
+                  RMF FM
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radio-select" value="radiozet">
+                <label class="form-check-label" for="exampleRadios2">
+                  Radio ZET
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radio-select" value="polskieradio">
+                <label class="form-check-label" for="exampleRadios3">
+                  Polskie Radio
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="card">
+          <h5 class="card-header bg-warning">Wybrane radio</h5>
+          <div class="card-body" id="radio-details">
+            <div id="rmffm-details" class="d-none">
+              <h5>Radio RMF FM</h5>
+              <p class="text">Radio numer 1 w Polsce! Największa i najpopularniejsza stacja muzyczno- informacyjna. Zawsze najlepsza muzyka i najświeższe fakty. Posłuchaj radio online.</p>
+              <a href="https://www.rmf.fm">Strona radia</a>
+            </div>
+            <div id="radiozet-details" class="d-none">
+              <h5>Radio ZET</h5>
+              <p class="text">RadioZET Online - Darmowe radio internetowe. Tylko u nas muzyka, teledyski, piosenki, wideo oraz Szymon Majewski, Kamil Nosel.</p>
+              <a href="https://www.radiozet.pl">Strona radia</a>
+            </div>
+            <div id="polskieradio-details" class="d-none">
+              <h5>Polskie Radio</h5>
+              <p class="text">Polskie Radio online: Najświeższe wiadomości, muzyka, kultura, nauka, historia. Nowości antenowe w Jedynce, Dwójce, Trójce i Czwórce. Z nami jesteś zawsze na bieżąco.</p>
+              <a href="https://www.polskieradio.pl">Strona radia</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >Pokaż zadania</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Zautomatyzuj następujący scenariusz:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body pl-5 pr-5">
+          <p class="lead">Użytkownik może przejść do strony radia</p>
+          <ol>
+            <li>Użytkownik otwiera stronę "Zadanie 3"</li>
+            <li>i wybiera ulubioną stację radiową</li>
+            <li>Użytkownik może przejść na stronę internetową wybranego radia</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $('form').on('click', function (event) {
+      let name = $("input[name='radio-select']:checked"). val()
+      $('#radio-details div').addClass('d-none')
+      $('#' + name + '-details').removeClass('d-none')
+
+    })
+
+  </script>
+</body>
+</html>

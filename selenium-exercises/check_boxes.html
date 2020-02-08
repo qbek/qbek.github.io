@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Selenium exercises - Check boxes</title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Start</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Zadanie 2</li>
+          </ol>
+        </nav>
+        <h2>Zadanie 2</h2>
+        <p class="lead"><strong>Elementy typu <i>check box</i></strong></p>
+        <hr class="my-4">
+      </div>
+    </div>
+    <div class="row pb-5">
+      <div class="col-6">
+        <div class="card">
+          <h5 class="card-header bg-success text-white">Checkboxes</h5>
+          <div class="card-body" name="color-card">
+            <h5 class="card-title">Wybierz kolory do zmieszania</h5>
+            <form action="" class="mb-3">
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" name="red">
+                <label class="form-check-label" for="red">Czerwony</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" name="green">
+                <label class="form-check-label" for="green">Zielony</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" name="blue">
+                <label class="form-check-label" for="blue">Niebieski</label>
+              </div>
+            </form>
+            <div class="pb-3" id="light">&nbsp</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card">
+          <h5 class="card-header bg-warning">Switches</h5>
+          <div class="card-body">
+            <h5 class="card-title">Przełącznik aktywuj / dezaktywuj</h5>
+            <div class="custom-control custom-switch pb-3">
+              <input type="checkbox" class="custom-control-input" id="switch">
+              <label class="custom-control-label" for="switch">Czy chcesz dodać komentarz?</label>
+            </div>
+            <div class="form-group">
+              <label for="text">Twój komentarz</label>
+              <textarea class="form-control" id="text" rows="3"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >Pokaż zadania</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Zautomatyzuj następujące scenariusze:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body pl-5 pr-5">
+          <p class="lead">Użytkownik może mieszać kolory</p>
+          <ol>
+            <li>Użytkownik otwiera stronę "Zadanie 2"</li>
+            <li>Wybiera kolor <i class="text-danger">czerwony</i></li>
+            <li>Wybiera kolor <i class="text-primary">niebieski</i></li>
+            <li>Użytkownik jako rezultat otrzymuje kolor <i style="color: #FF00FF;">różowy</i> </li>
+          </ol>
+          <p class="lead">Użytkownik może aktywować pole komentarza</p>
+          <ol>
+            <li>Użytkownik otwiera stronę "Zadanie 2"</li>
+            <li>Użytkownik widzi, że pole komentarza jest wyłączone</li>
+            <li>Użytkownik aktywuje pole komentarza przełącznikiem</li>
+            <li>Pole komentarza powino zostać aktywowane</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+
+    $('#text').prop('disabled', true)
+    $('#switch').on('change', function (event) {
+      $('#text').prop('disabled', !$('#switch').is(':checked'))
+    })
+
+    setLight('#000000')
+    $('[name="color-card"]').on('click', function () {
+      let red = "00"
+      let green = "00"
+      let blue = "00"
+      if ( $('[name="red"]').is(':checked') ) { red = "FF" }
+      if ( $('[name="green"]').is(':checked') ) { green = "FF" }
+      if ( $('[name="blue"]').is(':checked') ) { blue = "FF" }
+      let color = '#' + red + green + blue
+      setLight(color)
+    })
+
+    function setLight (color) {
+      $('#light').css('background-color', color)
+      $('#light').attr('data-color', color)
+    }
+
+  </script>
+</body>
+</html>

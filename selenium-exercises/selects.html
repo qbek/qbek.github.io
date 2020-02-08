@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Selenium exercises - Selects</title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Start</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Zadanie 3</li>
+          </ol>
+        </nav>
+        <h2>Zadanie 4</h2>
+        <p class="lead"><strong>Elementy typu <i>select</i></strong></p>
+        <hr class="my-4">
+        <div class="alert alert-success d-none" role="alert">
+          <strong>Gratulacje!!! Wygrałeś 1 000 000</strong>
+        </div>
+        <div class="alert alert-danger d-none" role="alert">
+          <strong>Niestety przegrałeś! Spróbuj jeszcze raz!</strong>
+        </div>
+      </div>
+    </div>
+    <div class="row pb-5">
+      <div class="col-4">
+        <div class="card" id="question1">
+          <h5 class="card-header bg-primary text-white">Stawka 100 PLN</h5>
+          <div class="card-body" name="color-card">
+            <h5 class="card-title">Ile liter to miejsce, w którym plecy tracą szlachetną nazwę?</h5>
+            <form class="mb-3" >
+              <select class="custom-select mb-3">
+                <option value="" disabled selected>Twoja odpowiedź:</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+              <button type="submit" class="btn btn-primary">Zaznacz odpowiedź</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card" id="question2">
+          <h5 class="card-header bg-light text-muted">Stawka 10 000 PLN</h5>
+          <div class="card-body" name="color-card">
+            <h5 class="card-title">Które zdanie ma najwięcej wyrazów?</h5>
+            <form class="mb-3">
+              <select class="custom-select mb-3" disabled="">
+                <option value="" disabled selected>Twoja odpowiedź:</option>
+                <option value="words-6">Sed ut perspiciatis unde omnis iste</option>
+                <option value="words-5">Sit amet, consectetur, adipisci velit</option>
+                <option value="words-7">Nisi ut aliquid ex ea comm consequr?</option>
+                <option value="words-6">magni dolores eos qui ratione voluptatem</option>
+              </select>
+              <button type="submit" class="btn btn-primary" disabled="true">Zaznacz odpowiedź</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card" id="question3">
+          <h5 class="card-header bg-light text-muted">Stawka 1 000 000 PLN</h5>
+          <div class="card-body" name="color-card">
+            <h5 class="card-title">O czym myślę? <br> &nbsp</h5>
+            <form class="mb-3">
+              <select class="custom-select mb-3" disabled="" data-tip="3">
+                <option value="" disabled selected>Twoja odpowiedź:</option>
+                <option value="">Marchewka</option>
+                <option value="">Akwarium</option>
+                <option value="">Kredyt</option>
+                <option value="">Obiad</option>
+              </select>
+              <button type="submit" class="btn btn-primary" disabled="true">Zaznacz odpowiedź</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >Pokaż zadania</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Zautomatyzuj następujące scenariusze:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body pl-5 pr-5">
+          <p class="lead">Użytkownik może przegrać</p>
+          <ol>
+            <li>Użytkownik otwiera stronę "Zadanie 4"</li>
+            <li>Użytkownik wybiera niepoprawną odpowiedź</li>
+            <li>Użytkownik klika w przycisk "Zaznacz odpowiedź"</li>
+            <li>Zostaje wyświetlona informacja o przegranej grze</li>
+          </ol>
+          <p class="lead">Użytkownik może wygrać</p>
+          <ol>
+            <li>Użytkownik otwiera stronę "Zadanie 4"</li>
+            <li>Użytkownik udziela poprawnej odpowiedzi na wszystkie pytania</li>
+            <li>Zostaje wyświetlona informacja o wygranej. Gratulacje!</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    let $q1 = $('#question1')
+    let $q2 = $('#question2')
+    let $q3 = $('#question3')
+
+    let answer_q3 = getRandomAnswer()
+    $('select', $q3).attr('data-tip', answer_q3)
+
+    $('form', $q1).on('submit', function (event) {
+      event.preventDefault()
+      if ( $('select', $q1).val() === '4' ) {
+        showQuestionTwo()
+      } else {
+        gameLostOn($q1)
+      }
+    })
+
+    $('form', $q2).on('submit', function (event) {
+      event.preventDefault()
+      if ( $('select', $q2).val() === 'words-7' ) {
+        showQuestionThree()
+      } else {
+        gameLostOn($q2)
+      }
+    })
+
+    $('form', $q3).on('submit', function (event) {
+      event.preventDefault()
+      let selector = 'select option:nth-child('+ answer_q3 +')'
+      if ( $(selector, $q3).is(':selected') ) {
+        gameWon()
+      } else {
+        gameLostOn($q3)
+      }
+    })
+
+    function showQuestionTwo() {
+      dimmCard($q1)
+      highlightCard($q2)
+    }
+
+    function showQuestionThree() {
+      dimmCard($q2)
+      highlightCard($q3)
+    }
+
+    function gameLostOn( $card ) {
+      $('.alert-danger').removeClass('d-none')
+      dimmCard($card)
+    }
+
+    function gameWon () {
+      $('.alert-success').removeClass('d-none')
+      dimmCard($q3)
+    }
+
+    function dimmCard( $card ) {
+      $('.card-header', $card).removeClass('bg-primary text-white')
+      $('.card-header', $card).addClass('bg-light text-muted')
+      $('select', $card).prop('disabled', true);
+      $('button', $card).prop('disabled', true);
+    }
+
+    function highlightCard( $card ) {
+      $('.card-header', $card).removeClass('bg-light text-muted')
+      $('.card-header', $card).addClass('bg-primary text-white')
+
+      $('select', $card).prop('disabled', false);
+      $('button', $card).prop('disabled', false);
+    }
+
+    function getRandomAnswer() {
+      let random =  Math.floor(Math.random() * Math.floor(5))
+      return random + 1
+    }
+
+
+  </script>
+</body>
+</html>
