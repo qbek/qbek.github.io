@@ -38,19 +38,14 @@ layout: default
   {% endif %}
 
   {% if page.comments %}
-  	<div id="comments"></div>
-	<script type="text/javascript">
-		const gitment = new Gitment({
-			owner: 'qbek',
-			repo: 'https://github.com/qbek/qbek.github.io',
-			oauth: {
-				client_id: '0e940a9688c28c2b1f84',
-				client_secret: 'da442c531ffa80e9040a963fad87e118b0c43e06',
-				},
-			});
-
-			gitment.render('comments')
-	</script>
+	<script src="https://utteranc.es/client.js"
+			repo="qbek/qbek.github.io"
+			issue-term="pathname"
+			label="comments"
+			theme="github-light"
+			crossorigin="anonymous"
+			async>
+</script>
 
 	{% endif %}
 </div>
