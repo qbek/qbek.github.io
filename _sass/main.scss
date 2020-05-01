@@ -385,6 +385,12 @@ section {
     }
   }
 }
+.post-tag {
+  background-color: #0087BE;
+  color: white;
+  padding: 1px 5px;
+  border-radius: 10px;
+}
 @keyframes bounce {0% {
     transform: translate3d( 0, -1000px, 0 );
   }

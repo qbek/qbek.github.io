@@ -13,12 +13,12 @@
 	<span class="logo-prompt code">{{ prompt }}</span>
 </aside>
 <div class="page-navigation code">
-	<a class="top-menu {% if page.url == '/index.html' or page.url == '/' %} selected {% endif %}" href="/">O mnie</a>
+	<a class="top-menu{% if page.url == '/index.html' or page.url == '/' %} selected{% endif %}" href="/">O mnie</a>
 	<span> &middot; </span>
-	<a class="top-menu {% if page.url == '/blog' %} selected {% endif %} " href="/blog">Blog</a>
+	<a class="top-menu{% if page.url == '/blog' %} selected{% endif %} " href="/blog">Blog</a>
 	<span> &middot; </span>
-	<a class="top-menu {% if page.url == '/trainings/' %} selected {% endif %}" href="/trainings">Szkolenia</a>
+	<a class="top-menu{% if page.url == '/trainings/' %} selected{% endif %}" href="/trainings">Szkolenia</a>
 	<span> &middot; </span>
-	<a class="top-menu {% if page.url == '/materials' %} selected {% endif %}" href="/materials">Materiały</a>
+	<a class="top-menu{% if page.url == '/materials' %} selected{% endif %}" href="/materials">Materiały</a>
 </div>
 <div class="divider"></div>

@@ -14,10 +14,10 @@ Selenium jest obecnie jedną z najpopularniejszych i najchętniej stosowanych bi
 
 Jeżeli zaczynasz przygodę z automatyzacją, jednym z fajniejszych rozwiązań jest narzędzie [RobotFramework](https://robotframework.org). Testy pisze się w wysoko poziomowym języku skryptowym, łatwym do nauczenia, ale dającym duże możliwości. Proste ale bardzo wszechstronne narzędzie.
 
-**[Szkolenie Selenium + RobotFramework]( {{ site.url }}/trainings/Selenium_RobotFramework.pdf )**
+**[Szkolenie Selenium + RobotFramework]( Selenium_RobotFramework.pdf )**
 
 Jeżeli masz już za zosbą pierwsze kroki w pisaniu testów automatycznych w Javie przy użyciu biblioteki Selenium. Chciałbyś się nauczyć dobrych praktyk i technik przydatnych w projektowaniu testów i ich automatyzowaniu.
 
-**[Szkolenie Selenium + Serenity + Java]( {{ site.url }}/trainings/Selenium_Serenity_Java.pdf )**
+**[Szkolenie Selenium + Serenity + Java]( Selenium_Serenity_Java.pdf )**
 
 ## Interfejsy REST API
