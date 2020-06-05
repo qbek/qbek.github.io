@@ -1,0 +1,100 @@
+---
+layout: selenium_example_page
+task_id: 2
+lang: en
+task_name: Checkbox elements
+exercise-scenarios:
+  - name: User can mix colors
+    steps:
+      - User opens "Exercise 2" page
+      - User selects <i class="text-danger">RED</i>
+      - User selects <i class="text-primary">BLUE</i>
+      - Verify result is <i style="color&#58; pink"> PINK</i>
+  - name: User can activate comments
+    steps:
+      - User opens "Exercise 2" Page
+      - Verify if comments text field is disabled
+      - User activates comments
+      - Verify if comments text field is enabled
+
+
+---
+  <div class="container">
+    <div class="row pb-5">
+      <div class="col-6">
+        <div class="card">
+          <h5 class="card-header bg-success text-white">Checkboxes</h5>
+          <div class="card-body" name="color-card">
+            <h5 class="card-title">Select colors to mix</h5>
+            <form action="" class="mb-3">
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" name="red">
+                <label class="form-check-label" for="red">RED</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" name="green">
+                <label class="form-check-label" for="green">GREEN</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" name="blue">
+                <label class="form-check-label" for="blue">BLUE</label>
+              </div>
+            </form>
+            <div class="pb-3" id="light">&nbsp</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card">
+          <h5 class="card-header bg-warning">Switches</h5>
+          <div class="card-body">
+            <h5 class="card-title">Activate comments</h5>
+            <div class="custom-control custom-switch pb-3">
+              <input type="checkbox" class="custom-control-input" id="switch">
+              <label class="custom-control-label" for="switch">Want to add a comment?</label>
+            </div>
+            <div class="form-group">
+              <label for="text">Comment:</label>
+              <textarea class="form-control" id="text" rows="3"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >Show test case</button>
+      </div>
+    </div>
+  </div>
+  {% include materials/exercise-task-modal.html %}
+  <script type="text/javascript">
+
+    $('#text').prop('disabled', true)
+    $('#switch').on('change', function (event) {
+      $('#text').prop('disabled', !$('#switch').is(':checked'))
+    })
+
+    setLight('#000000')
+    $('[name="color-card"]').on('click', function () {
+      let red = "00"
+      let green = "00"
+      let blue = "00"
+      if ( $('[name="red"]').is(':checked') ) { red = "FF" }
+      if ( $('[name="green"]').is(':checked') ) { green = "FF" }
+      if ( $('[name="blue"]').is(':checked') ) { blue = "FF" }
+      let color = '#' + red + green + blue
+      setLight(color)
+    })
+
+    function setLight (color) {
+      $('#light').css('background-color', color)
+      $('#light').attr('data-color', color)
+    }
+
+  </script>

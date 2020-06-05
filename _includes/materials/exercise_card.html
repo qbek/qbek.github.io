@@ -7,6 +7,12 @@
 
   </div>
   <div class="card-footer">
-    <a href="{{ include.url }}" class="btn btn-light btn-block" style="background-color: #CCCCCC; border-color: #CCCCCC">Otwórz zadanie</a>
+    <a href="{{ include.url }}" class="btn btn-light btn-block" style="background-color: #CCCCCC; border-color: #CCCCCC">
+      {% if include.btn-text %}
+        {{ include.btn-text }}
+      {% else %}
+        Otwórz zadanie
+      {% endif %}
+    </a>
   </div>
 </div>

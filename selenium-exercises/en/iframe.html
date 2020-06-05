@@ -1,0 +1,44 @@
+---
+layout: selenium_example_page
+task_id: 5
+lang: en
+task_name: iFrames
+exercise-scenarios:
+  - name: User can save personal data
+    steps:
+    - User opens "Exercise 5" page
+    - User enters firstname
+    - User enters lastname
+    - User enters email address
+    - User clicks "Save" button
+    - Verify if saved data is valid
+---
+  <div class="container">
+    <div class="row pb-5">
+      <div class="col-12">
+        <iframe class="embed-responsive-item" src="iframe_form.html" width="100%" height="450px">
+        </iframe>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal" >Show test case</button>
+      </div>
+    </div>
+  </div>
+  {% include materials/exercise-task-modal.html %}
+  <script type="text/javascript">
+    $('form').on('submit', function (event) {
+      event.preventDefault();
+      $('#firstname-check').text($('#firstname').prop('value'))
+      $('#lastname-check').text($('#lastname').prop('value'))
+      $('#collapse-check input').prop('value', $('#email').prop('value'))
+      $('#collapse-check').collapse('show')
+    })
+
+    $('.btn-warning').on('click', function (event) {
+      $('#collapse-form').collapse('show')
+    })
+
+
+  </script>

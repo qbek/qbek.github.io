@@ -9,10 +9,23 @@ published: true
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Start</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Zadanie {{ page.task_id }}</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              {% if page.lang == 'pl' %}
+                Zadanie
+              {% else %}
+                Exercise
+              {% endif %}
+              {{ page.task_id }}</li>
           </ol>
         </nav>
-        <h2>Zadanie {{ page.task_id }}</h2>
+        <h2>
+          {% if page.lang == 'pl' %}
+            Zadanie
+          {% else %}
+            Exercise
+          {% endif %}
+          {{ page.task_id }}
+        </h2>
         <p class="lead"><strong>{{ page.task_name }}</strong></p>
         <hr class="my-4">
       </div>

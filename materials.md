@@ -3,4 +3,6 @@ layout: page
 title: Materiały szkoleniowe
 ---
 
-[Szkolenie Selenium](/selenium-exercises)
+[Selenium - zadania](/selenium-exercises/pl/)
+
+[Selenium exercises](/selenium-exercises/en/)
