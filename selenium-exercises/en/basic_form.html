@@ -1,0 +1,96 @@
+---
+layout: selenium_example_page
+task_id: 1
+lang: en
+task_name: Basic web form
+exercise-scenarios:
+  - name: User can save personal data
+    steps:
+      - User opens "Exercise 1" page
+      - User enters firstname
+      - User enters lastname
+      - User enters email address
+      - User clicks "Save" button
+      - Verify if saved data is valid
+---
+  <div class="container">
+    <div class="row pb-5">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                  Enter personal data:
+              </h5>
+            </div>
+            <div id="collapse-form" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Firstname</label>
+                    <input type="text" class="form-control" id="firstname">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Lastname</label>
+                    <input type="text" class="form-control" id="lastname">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Email</label>
+                    <input type="email" class="form-control" id="email">
+                  </div>
+                  <button type="submit" class="btn btn-success">Save</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                  Check your data:
+              </h5>
+            </div>
+            <div id="collapse-check" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                <div class="form-group">
+                  <label><strong>Firstname</strong></label>
+                  <p class="lead" id="firstname-check" >Jakub</p>
+                </div>
+                <div class="form-group">
+                  <label><strong>Lastname</strong></label>
+                  <p class="lead" id="lastname-check" >Jakub</p>
+                </div>
+                <div class="form-group">
+                  <label><strong>Email</strong></label>
+                  <input type="lead" readonly class="form-control-plaintext" value="email@example.com">
+                </div>
+                <button type="button" class="btn btn-warning">Correct</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2"></div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal" >Show test case</button>
+      </div>
+    </div>
+  </div>
+  {% include materials/exercise-task-modal.html %}
+  <script type="text/javascript">
+    $('form').on('submit', function (event) {
+      event.preventDefault();
+      $('#firstname-check').text($('#firstname').prop('value'))
+      $('#lastname-check').text($('#lastname').prop('value'))
+      $('#collapse-check input').prop('value', $('#email').prop('value'))
+      $('#collapse-check').collapse('show')
+    })
+
+    $('.btn-warning').on('click', function (event) {
+      $('#collapse-form').collapse('show')
+    })
+
+
+  </script>

@@ -1,0 +1,78 @@
+---
+layout: bootstrap
+---
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="jumbotron">
+          <h1 class="display-4">Cześć!</h1>
+          <p class="lead">Jest to strona do praktycznego ćwiczenia swoich umiejętności automatyzowania testów webUI</p>
+          <hr class="my-4">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-4">
+        <h2>Selenium - zadania podstawowe</h2>
+      </div>
+    </div>
+
+    <div class="row row-cols-3">
+      <div class="col mb-4">
+          {% include materials/exercise_card.html
+            header="Zadanie 1"
+            title="Tekst"
+            text="<ul>
+                    <li>wprowadzanie tekstu</li>
+                    <li>pobieranie tekstu</li>
+                  </ul>"
+            url="basic_form.html"
+          %}
+      </div>
+      <div class="col mb-4">
+          {% include materials/exercise_card.html
+            header="Zadanie 2"
+            title="Checkbox'y"
+            text="<ul>
+                    <li>obsługa checkbox'ów</li>
+                    <li>pobieranie atrybutów elementu</li>
+                  </ul>"
+            url="check_boxes.html"
+          %}
+      </div>
+      <div class="col mb-4">
+          {% include materials/exercise_card.html
+            header="Zadanie 3"
+            title="Radio button'y"
+            text="<ul>
+                    <li>wybór radio button'a</li>
+                    <li>sprawdzanie poprawności linków</li>
+                  </ul>"
+            url="radio_buttons.html" %}
+      </div>
+      <div class="col mb-4">
+          {% include materials/exercise_card.html
+            header="Zadanie 4"
+            title="Select'y"
+            text="<ul>
+                    <li>wybór poprzez labelkę</li>
+                    <li>wybór poprzez wartość</li>
+                    <li>wybór poprzez indeks</li>
+                  </ul>"
+            url="selects.html"
+          %}
+      </div>
+      <div class="col mb-4">
+          {% include materials/exercise_card.html
+            header="Zadanie 5"
+            title="iFrame"
+            text="<ul>
+                    <li>Obsługa iFrame</li>
+                    <li>Obsługa zagnieżdżonego formularza</li>
+                    <li>Przewijanie strony</li>
+                  </ul>"
+            url="iframe.html"
+          %}
+      </div>
+    </div>

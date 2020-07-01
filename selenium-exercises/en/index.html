@@ -1,0 +1,85 @@
+---
+layout: bootstrap
+---
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="jumbotron">
+          <h1 class="display-4">Hello!</h1>
+          <p class="lead">Here you can find set of exercises to practice your Selenium skills.</p>
+          <hr class="my-4">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-4">
+        <h2>Selenium - basic exercises</h2>
+      </div>
+    </div>
+
+    <div class="row row-cols-3">
+      <div class="col mb-4">
+          {% include materials/exercise_card.html
+            header="Exercise 1"
+            title="Text"
+            text="<ul>
+                    <li>pressing keys</li>
+                    <li>reading text</li>
+                  </ul>"
+            url="basic_form.html"
+            btn-text="Open exercise"
+          %}
+      </div>
+      <div class="col mb-4">
+          {% include materials/exercise_card.html
+            header="Exercise 2"
+            title="Checkboxes"
+            text="<ul>
+                    <li>checkbox handling</li>
+                    <li>switches handling</li>
+                    <li>reading element attribiutes</li>
+                  </ul>"
+            url="check_boxes.html"
+            btn-text="Open exercise"
+          %}
+      </div>
+      <div class="col mb-4">
+          {% include materials/exercise_card.html
+            header="Exercise 3"
+            title="Radio buttons"
+            text="<ul>
+                    <li>selecting radio buttons</li>
+                    <li>link url validation</li>
+                  </ul>"
+            url="radio_buttons.html"
+            btn-text="Open exercise" %}
+      </div>
+      <div class="col mb-4">
+          {% include materials/exercise_card.html
+            header="Exercise 4"
+            title="Selects"
+            text="<ul>
+                    <li>select by label</li>
+                    <li>select by value</li>
+                    <li>select by index</li>
+                    <li>calculations</li>
+                  </ul>"
+            url="selects.html"
+            btn-text="Open exercise"
+          %}
+      </div>
+      <div class="col mb-4">
+          {% include materials/exercise_card.html
+            header="Exercise 5"
+            title="iFrame"
+            text="<ul>
+                    <li>iFrame handling</li>
+                    <li>Hadnling iFrame elements</li>
+                    <li>Page scrolling</li>
+                  </ul>"
+            url="iframe.html"
+            btn-text="Open exercise"
+          %}
+      </div>
+    </div>

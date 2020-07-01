@@ -1,0 +1,86 @@
+---
+layout: selenium_example_page
+task_id: 3
+lang: en
+task_name: Radio buttons
+exercise-scenarios:
+  - name: User can check his favourite radio station page
+    steps:
+      - User opens "Exercise 3" page
+      - User selects one of radio stations
+      - Verify if link redirects to correct page
+---
+  <div class="container">
+    <div class="row pb-5">
+      <div class="col-4">
+        <div class="card">
+          <h5 class="card-header bg-success text-white">Polish radio stations</h5>
+          <div class="card-body" name="color-card">
+            <h5 class="card-title">Select one</h5>
+            <form action="" class="mb-3">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radio-select" value="rmffm">
+                <label class="form-check-label" for="exampleRadios1">
+                  RMF FM
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radio-select" value="radiozet">
+                <label class="form-check-label" for="exampleRadios2">
+                  Radio ZET
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radio-select" value="polskieradio">
+                <label class="form-check-label" for="exampleRadios3">
+                  Polskie Radio
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="card">
+          <h5 class="card-header bg-warning">Information</h5>
+          <div class="card-body" id="radio-details">
+            <div id="rmffm-details" class="d-none">
+              <h5>Radio RMF FM</h5>
+              <p class="text">Radio numer 1 w Polsce! Największa i najpopularniejsza stacja muzyczno- informacyjna. Zawsze najlepsza muzyka i najświeższe fakty. Posłuchaj radio online.</p>
+              <a href="https://www.rmf.fm">Web page</a>
+            </div>
+            <div id="radiozet-details" class="d-none">
+              <h5>Radio ZET</h5>
+              <p class="text">RadioZET Online - Darmowe radio internetowe. Tylko u nas muzyka, teledyski, piosenki, wideo oraz Szymon Majewski, Kamil Nosel.</p>
+              <a href="https://www.radiozet.pl">Web page</a>
+            </div>
+            <div id="polskieradio-details" class="d-none">
+              <h5>Polskie Radio</h5>
+              <p class="text">Polskie Radio online: Najświeższe wiadomości, muzyka, kultura, nauka, historia. Nowości antenowe w Jedynce, Dwójce, Trójce i Czwórce. Z nami jesteś zawsze na bieżąco.</p>
+              <a href="https://www.polskieradio.pl">Web page</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >Show test case</button>
+      </div>
+    </div>
+  </div>
+  {% include materials/exercise-task-modal.html %}
+  <script type="text/javascript">
+    $('form').on('click', function (event) {
+      let name = $("input[name='radio-select']:checked"). val()
+      $('#radio-details div').addClass('d-none')
+      $('#' + name + '-details').removeClass('d-none')
+
+    })
+
+  </script>

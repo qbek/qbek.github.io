@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Selenium exercises - Radio buttons</title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row pb-5 pt-2">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+                Emnter personal data:
+            </h5>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Firstname</label>
+                <input type="text" class="form-control" id="firstname">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Lastname</label>
+                <input type="text" class="form-control" id="lastname">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Email</label>
+                <input type="email" class="form-control" id="email">
+              </div>
+              <button type="submit" class="btn btn-success">Save</button>
+            </form>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+                Confirm data:
+            </h5>
+          </div>
+          <div class="card-body">
+            <div class="form-group">
+              <label><strong>Firstname</strong></label>
+              <p class="lead" id="firstname-check" ></p>
+            </div>
+            <div class="form-group">
+              <label><strong>Lastname</strong></label>
+              <p class="lead" id="lastname-check" ></p>
+            </div>
+            <div class="form-group">
+              <label><strong>Email</strong></label>
+              <input type="lead" readonly class="form-control-plaintext">
+            </div>
+            <button type="button" class="btn btn-warning">Correct</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $('form').on('submit', function (event) {
+      event.preventDefault();
+      $('#firstname-check').text($('#firstname').prop('value'))
+      $('#lastname-check').text($('#lastname').prop('value'))
+      $('#collapse-check input').prop('value', $('#email').prop('value'))
+      $('#collapse-check').collapse('show')
+    })
+
+    $('.btn-warning').on('click', function (event) {
+      $('#collapse-form').collapse('show')
+    })
+
+
+  </script>
+</body>
+</html>
