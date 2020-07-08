@@ -1,7 +1,14 @@
 ---
 layout: selenium_example_page
 task_id: 3
+lang: pl
 task_name: Elementy typu <i>radio button</i>
+exercise-scenarios:
+  - name: Użytkownik może przejść do strony radia
+    steps:
+      - Użytkownik otwiera stronę "Zadanie 3"
+      - i wybiera ulubioną stację radiową
+      - Użytkownik może przejść na stronę internetową wybranego radia
 ---
   <div class="container">
     <div class="row pb-5">
@@ -63,30 +70,11 @@ task_name: Elementy typu <i>radio button</i>
     </div>
     <div class="row">
       <div class="col-12">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >Pokaż zadania</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Pokaż zadania</button>
       </div>
     </div>
   </div>
-  <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Zautomatyzuj następujący scenariusz:</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body pl-5 pr-5">
-          <p class="lead">Użytkownik może przejść do strony radia</p>
-          <ol>
-            <li>Użytkownik otwiera stronę "Zadanie 3"</li>
-            <li>i wybiera ulubioną stację radiową</li>
-            <li>Użytkownik może przejść na stronę internetową wybranego radia</li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% include materials/exercise-task-modal.html %}
   <script type="text/javascript">
     $('form').on('click', function (event) {
       let name = $("input[name='radio-select']:checked"). val()

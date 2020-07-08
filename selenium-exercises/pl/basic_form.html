@@ -1,7 +1,17 @@
 ---
 layout: selenium_example_page
 task_id: 1
+lang: pl
 task_name: Podstawowy formularz
+exercise-scenarios:
+  - name: Użytkownik może podać swoje dane
+    steps:
+      - Użytkownik otwiera stronę "Zadanie 1"
+      - Użytkownik podaje swoje imię
+      - Użytkownik podaje swoje nazwisko
+      - Użytkownik podaje swój adres email
+      - Użytkownik zapisuje swoje dane
+      - Wszystkie dane użytkownika są poprawnie wyświetlane
 ---
   <div class="container">
     <div class="row pb-5">
@@ -68,29 +78,7 @@ task_name: Podstawowy formularz
       </div>
     </div>
   </div>
-  <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Zautomatyzuj następujący test:</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body pl-5 pr-5">
-          <p class="lead">Użytkownik może podać swoje dane </p>
-          <ol>
-            <li>Użytkownik otwiera stronę "Zadanie 1"</li>
-            <li>Użytkownik podaje swoje imię</li>
-            <li>Użytkownik podaje swoje nazwisko</li>
-            <li>Użytkownik podaje swój adres email</li>
-            <li>Użytkownik zapisuje swoje dane</li>
-            <li>Wszystkie dane użytkownika są poprawnie wyświetlane</li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% include materials/exercise-task-modal.html %}
   <script type="text/javascript">
     $('form').on('submit', function (event) {
       event.preventDefault();

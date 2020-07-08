@@ -1,7 +1,21 @@
 ---
 layout: selenium_example_page
 task_id: 4
+lang: pl
 task_name: Elementy typu <i>select</i>
+exercise-scenarios:
+  - name: Użytkownik może przegrać
+    steps:
+      - Użytkownik otwiera stronę "Zadanie 4"
+      - Użytkownik wybiera niepoprawną odpowiedź
+      - Użytkownik klika w przycisk "Zaznacz odpowiedź"
+      - Zostaje wyświetlona informacja o przegranej grze
+
+  - name: Użytkownik może wygrać
+    steps:
+      - Użytkownik otwiera stronę "Zadanie 4"
+      - Użytkownik udziela poprawnej odpowiedzi na wszystkie pytania
+      - Zostaje wyświetlona informacja o wygranej. Gratulacje!
 ---
   <div class="container">
     <div class="row">
@@ -81,33 +95,7 @@ task_name: Elementy typu <i>select</i>
       </div>
     </div>
   </div>
-  <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Zautomatyzuj następujące scenariusze:</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body pl-5 pr-5">
-          <p class="lead">Użytkownik może przegrać</p>
-          <ol>
-            <li>Użytkownik otwiera stronę "Zadanie 4"</li>
-            <li>Użytkownik wybiera niepoprawną odpowiedź</li>
-            <li>Użytkownik klika w przycisk "Zaznacz odpowiedź"</li>
-            <li>Zostaje wyświetlona informacja o przegranej grze</li>
-          </ol>
-          <p class="lead">Użytkownik może wygrać</p>
-          <ol>
-            <li>Użytkownik otwiera stronę "Zadanie 4"</li>
-            <li>Użytkownik udziela poprawnej odpowiedzi na wszystkie pytania</li>
-            <li>Zostaje wyświetlona informacja o wygranej. Gratulacje!</li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% include materials/exercise-task-modal.html %}
   <script type="text/javascript">
     let $q1 = $('#question1')
     let $q2 = $('#question2')
